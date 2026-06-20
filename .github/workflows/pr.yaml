@@ -264,6 +264,34 @@
               name: windows_arm64_outputs
               path: |
                 Kazumi_windows_*_arm64.zip
+          - name: Build unsigned arm64 msix
+            run: dart run msix:create --architecture arm64 --build-windows false
+          - name: Upload windows arm64 msix ouputs
+            uses: actions/upload-artifact@v4
+            id: unsigned-windows-arm64-msix-artifacts
+            with:
+              name: windows_arm64_msix_outputs
+              path: |
+                build/windows/arm64/runner/Release/kazumi.msix
+          - run: New-Item -Path "build/windows/arm64_msix_signed_output" -ItemType Directory
+          - name: sign windows arm64 msix
+            if: ${{ github.event.inputs.signpath_sign == 'true'}}
+            uses: signpath/github-action-submit-signing-request@v1.1
+            with:
+              api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
+              organization-id: 'fa047255-4772-4be1-b14f-5cfa62635877'
+              project-slug: 'Kazumi'
+              signing-policy-slug: 'release-signing'
+              artifact-configuration-slug: 'MSIX'
+              github-artifact-id: '${{ steps.unsigned-windows-arm64-msix-artifacts.outputs.artifact-id }}'
+              wait-for-completion: true
+              output-artifact-directory: 'build/windows/arm64_msix_signed_output'
+          - name: Upload windows arm64 msix signed ouputs
+            if: ${{ github.event.inputs.signpath_sign == 'true'}}
+            uses: actions/upload-artifact@v4
+            with:
+              name: windows_arm64_msix_signed_outputs
+              path: build/windows/arm64_msix_signed_output/*.msix
 
 
       flutter-build-ios:
