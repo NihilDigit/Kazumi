@@ -117,50 +117,50 @@ dependencies:
       ref: b429f8ba6b8a99cd0f7eb5fe8d1621f325635c3d
   media_kit:
     git:
-      url: https://github.com/Predidit/media-kit.git
-      ref: 87cdfef7dc4c14653068a1174d5eeaa7627e5a88
+      url: https://github.com/NihilDigit/media-kit.git
+      ref: dbb23e759b2f51979bed7afce0318fbee3e60f8e
       path: ./media_kit
   media_kit_video:
     git:
-      url: https://github.com/Predidit/media-kit.git
-      ref: 87cdfef7dc4c14653068a1174d5eeaa7627e5a88
+      url: https://github.com/NihilDigit/media-kit.git
+      ref: dbb23e759b2f51979bed7afce0318fbee3e60f8e
       path: ./media_kit_video
   media_kit_libs_video:
     git:
-      url: https://github.com/Predidit/media-kit.git
-      ref: 87cdfef7dc4c14653068a1174d5eeaa7627e5a88
+      url: https://github.com/NihilDigit/media-kit.git
+      ref: dbb23e759b2f51979bed7afce0318fbee3e60f8e
       path: ./libs/universal/media_kit_libs_video
 
 dependency_overrides:
   media_kit_libs_linux:
     git:
-      url: https://github.com/Predidit/media-kit.git
-      ref: 87cdfef7dc4c14653068a1174d5eeaa7627e5a88
+      url: https://github.com/NihilDigit/media-kit.git
+      ref: dbb23e759b2f51979bed7afce0318fbee3e60f8e
       path: ./libs/linux/media_kit_libs_linux
   media_kit_libs_ios_video:
     git:
-      url: https://github.com/Predidit/media-kit.git
-      ref: 87cdfef7dc4c14653068a1174d5eeaa7627e5a88
+      url: https://github.com/NihilDigit/media-kit.git
+      ref: dbb23e759b2f51979bed7afce0318fbee3e60f8e
       path: ./libs/ios/media_kit_libs_ios_video
   media_kit_libs_android_video:
     git:
-      url: https://github.com/Predidit/media-kit.git
-      ref: 87cdfef7dc4c14653068a1174d5eeaa7627e5a88
+      url: https://github.com/NihilDigit/media-kit.git
+      ref: dbb23e759b2f51979bed7afce0318fbee3e60f8e
       path: ./libs/android/media_kit_libs_android_video
   media_kit_libs_windows_video:
     git:
-      url: https://github.com/Predidit/media-kit.git
-      ref: 87cdfef7dc4c14653068a1174d5eeaa7627e5a88
+      url: https://github.com/NihilDigit/media-kit.git
+      ref: dbb23e759b2f51979bed7afce0318fbee3e60f8e
       path: ./libs/windows/media_kit_libs_windows_video
   media_kit_libs_macos_video:
     git:
-      url: https://github.com/Predidit/media-kit.git
-      ref: 87cdfef7dc4c14653068a1174d5eeaa7627e5a88
+      url: https://github.com/NihilDigit/media-kit.git
+      ref: dbb23e759b2f51979bed7afce0318fbee3e60f8e
       path: ./libs/macos/media_kit_libs_macos_video
   media_kit_libs_ohos:
     git:
-      url: https://github.com/Predidit/media-kit.git
-      ref: 87cdfef7dc4c14653068a1174d5eeaa7627e5a88
+      url: https://github.com/NihilDigit/media-kit.git
+      ref: dbb23e759b2f51979bed7afce0318fbee3e60f8e
       path: ./libs/ohos/media_kit_libs_ohos
 
 dev_dependencies:
